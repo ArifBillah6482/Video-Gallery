@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h3 class="videoHeader">Video Gallery</h3>
+    <!--  -->
+    <div class="Container">
+      <div class="main-video">
+        <div class="video">
+          <video src="./1.mp4" controls class="mainVideo"></video>
+          <h3 class="mainVideoTitle">
+            0.1 Video 1 Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Saepe omnis, illum dolorem maxime nulla incidunt delectus
+            quisquam deserunt. Quod, molestiae. Maiores alias nemo laboriosam
+            nostrum perferendis perspiciatis in eum rerum?
+          </h3>
+        </div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <div class="video-list">
+        <div
+          class="vid a1"
+          onclick="changeVideo('./1.mp4', '0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, reiciendis.', 'a1')"
+        >
+          <video src="./1.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, reiciendis.
+          </h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a2"
+          onclick="changeVideo('./2.mp4', '0.2 Video 2', 'a2')"
+        >
+          <video src="./2.mp4" muted></video>
+          <h3 class="videoTitle">0.2 Video 2</h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a3"
+          onclick="changeVideo('./3.mp4', `0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique veniam, praesentium dignissimos minima totam unde ipsam quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta laboriosam molestias doloremque incidunt facere.`, 'a3')"
+        >
+          <video src="./3.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Similique veniam, praesentium dignissimos minima totam unde ipsam
+            quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta
+            laboriosam molestias doloremque incidunt facere.
+          </h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a4"
+          onclick="changeVideo('./1.mp4', '0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, reiciendis.', 'a4')"
+        >
+          <video src="./1.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, reiciendis.
+          </h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a5"
+          onclick="changeVideo('./2.mp4', '0.2 Video 2', 'a5')"
+        >
+          <video src="./2.mp4" muted></video>
+          <h3 class="videoTitle">0.2 Video 2</h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a6"
+          onclick="changeVideo('./3.mp4', `0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique veniam, praesentium dignissimos minima totam unde ipsam quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta laboriosam molestias doloremque incidunt facere.`, 'a6')"
+        >
+          <video src="./3.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Similique veniam, praesentium dignissimos minima totam unde ipsam
+            quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta
+            laboriosam molestias doloremque incidunt facere.
+          </h3>
+        </div>
+        <!--  -->
+        <div
+          class="vid a7"
+          onclick="changeVideo('./1.mp4', '0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, reiciendis.', 'a7')"
+        >
+          <video src="./1.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, reiciendis.
+          </h3>
+        </div>
+        <!--  -->
+
+        <div
+          class="vid a8"
+          onclick="changeVideo('./3.mp4', `0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique veniam, praesentium dignissimos minima totam unde ipsam quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta laboriosam molestias doloremque incidunt facere.`, 'a8')"
+        >
+          <video src="./3.mp4" muted></video>
+          <h3 class="videoTitle">
+            0.3 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Similique veniam, praesentium dignissimos minima totam unde ipsam
+            quia eligendi obcaecati rem illo. Ducimus, earum adipisci. Soluta
+            laboriosam molestias doloremque incidunt facere.
+          </h3>
+        </div>
+        <!--  -->
+
+        <!--  -->
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- <script>
+      const videoList = document.querySelectorAll(".video-list .vid");
+      const mainVideo = document.querySelector(".main-video video");
+      const title = document.querySelector(".main-video .mainVideoTitle");
+      //////////////////
+      videoList.forEach((video) => {
+        video.onclick = () => {
+          videoList.forEach((vid) => {
+            vid.classList.remove("active");
+            video.classList.add("active");
+            if (video.classList.contains("active")) {
+              let src = video.children[0].getAttribute("src");
+              mainVideo.src = src;
+              let text = video.children[1].innerHTML;
+              title.textContent = text;
+            } else {
+            }
+          });
+        };
+      });
+    </script> -->
+    <script src="./index.js"></script>
+  </body>
+</html>
